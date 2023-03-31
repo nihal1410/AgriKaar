@@ -14,6 +14,9 @@ import Card from "./components/Card";
 import Team from "./scenes/Team";
 import Blogs from "./scenes/Blogs";
 import Slider from "./Slider/Slider";
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import './App.scss'
+import TextBlock from "./scenes/TestBlock";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -33,15 +36,62 @@ function App() {
   }, []);
 
   return (
-    
+    <div className="App">
       <div className="app">
         <Navbar
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
         />
+        
+      <Parallax pages={3} style={{ top: '0', left: '0' }} class="animation">
+        <ParallaxLayer offset={0} speed={0.25}>
+          <div class="animation_layer parallax" id="artback"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.3}>
+          <div class="animation_layer parallax" id="mountain"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={-0.1}>
+          <div class="animation_layer parallax" id="logoland"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.3}>
+          <div class="animation_layer parallax" id="jungle1"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.35}>
+          <div class=    "animation_layer parallax" id="jungle2"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.5}>
+          <div class="animation_layer parallax" id="jungle3"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.45}>
+          <div class="animation_layer parallax" id="jungle4"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.40}>
+          <div class="animation_layer parallax" id="manonmountain"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={0} speed={0.35}>
+          <div class="animation_layer parallax" id="jungle5"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={1} speed={0.25}>
+       
+        </ParallaxLayer>
+        <ParallaxLayer offset={2} speed={0.25}>
+       
+        </ParallaxLayer>
+        <ParallaxLayer offset={3} speed={0.25}>
+         
+         </ParallaxLayer>
+         <ParallaxLayer offset={4} speed={0.25}>
+         
+         </ParallaxLayer>
+         <ParallaxLayer offset={5} speed={0.25}>
+         
+         </ParallaxLayer>
+      </Parallax>
+    </div>
+    <TextBlock></TextBlock>
 
-        <div className="">
+    <div className="">
           {isDesktop && (
             <DotGroup
               selectedPage={selectedPage}
@@ -53,7 +103,7 @@ function App() {
             amount="all"
             onViewportEnter={() => setSelectedPage("home")}
           >
-            <Landing setSelectedPage={setSelectedPage} />
+            
           </motion.div>
         </div>
         <LineGradient />
@@ -65,6 +115,7 @@ function App() {
           >
             <div>
               <MySkills></MySkills>
+              <a href="http://127.0.0.1:8000/"><button >Upload</button></a>
             </div>
           </motion.div>
         </div>

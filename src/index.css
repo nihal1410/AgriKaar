@@ -10,6 +10,6 @@ body,
 .app {
   width: 100%;
   height: 100%;
-  background-color: #4C4B16;
+  background-color: #237061;
   @apply text-white;
 }

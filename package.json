@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-spring/parallax": "^9.7.1",
     "@tailwindcss/typography": "^0.5.9",
     "framer-motion": "^10.10.0",
     "gsap": "^3.11.5",
@@ -19,6 +20,7 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.8",
+    "react-spring": "^9.7.1",
     "reset-css": "^5.0.1",
     "sass": "^1.60.0",
     "uuid": "^9.0.0",
