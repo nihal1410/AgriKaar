@@ -41,8 +41,5 @@ module.exports = {
     },
   },
 
-  plugins: [
-    
-    require('tailwindcss-all'),
-  ],
+  
 };

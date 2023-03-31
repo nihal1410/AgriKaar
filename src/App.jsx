@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import Upload from "./scenes/Upload";
 import Card from "./components/Card";
 import Team from "./scenes/Team";
-import "./App.scss";
+
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div className="all-initial">
+    
       <div className="app">
         <Navbar
           isTopOfPage={isTopOfPage}
@@ -100,7 +100,7 @@ function App() {
         <Footer />
       </div>
       
-    </div>
+   
   );
 }
 
