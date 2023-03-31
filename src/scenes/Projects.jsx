@@ -22,7 +22,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title ,src}) => {
+const Project = ({ title ,src,data}) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -32,15 +32,20 @@ const Project = ({ title ,src}) => {
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
         <p className="mt-7 text-black">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
+         {data}
         </p>
       </div>
       <img  src={src} alt={projectTitle} />
     </motion.div>
   );
 };
-
+const data1="helooo 1 "
+const data2="hellooo 2"
+const data3="hellooo 3"
+const data4="hellooo 4"
+const data5="hrllo 5"
+const data6="heloo 6"
+const data7="helooo 7"
 const Projects = () => {
   return (
     <section id="" className="pt-48 pb-48">
@@ -87,17 +92,17 @@ const Projects = () => {
           >
             Helping the 
           </div>
-          <Project title="Project 1" src={project1}/>
-          <Project title="Project 2" src={project2} />
+          <Project title="Project 1" src={project1} data={data1}/>
+          <Project title="Project 2" src={project2}  data={data2}/>
 
           {/* ROW 2 */}
-          <Project title="Project 3" src={project3}/>
-          <Project title="Project 4" src={project4}/>
-          <Project title="Project 5" src={project5}/>
+          <Project title="Project 3" src={project3} data={data3}/>
+          <Project title="Project 4" src={project4} data={data4}/>
+          <Project title="Project 5" src={project5} data={data5} />
 
           {/* ROW 3 */}
-          <Project title="Project 6" src={project6}/>
-          <Project title="Project 7" src={project7}/>
+          <Project title="Project 6" src={project6} data={data6}/>
+          <Project title="Project 7" src={project7} data={data7}/>
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"

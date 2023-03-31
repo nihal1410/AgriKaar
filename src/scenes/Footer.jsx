@@ -10,7 +10,7 @@ const Footer = () => {
             AgriKaar
           </p>
           <p className="font-playfair text-md text-yellow">
-            ©2022 ESPER. All Rights Reserved.
+            2023 Team AgreKaar  
           </p>
         </div>
       </div>
