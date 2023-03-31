@@ -1,9 +1,8 @@
 import Navbar from "./scenes/Navbar";
 import Landing from "./scenes/Landing";
 import DotGroup from "./scenes/DotGroup";
-import MySkills from "./scenes/MySkills";
+import MySkills from "./scenes/Services";
 import LineGradient from "./components/LineGradient";
-import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
 import useMediaQuery from "./hooks/useMediaQuery";
@@ -13,6 +12,7 @@ import { motion } from "framer-motion";
 import Upload from "./scenes/Upload";
 import Card from "./components/Card";
 import Team from "./scenes/Team";
+import Blogs from "./scenes/Blogs";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -74,7 +74,7 @@ function App() {
             amount="all"
             onViewportEnter={() => setSelectedPage("projects")}
           >
-            <Projects />
+            <Blogs />
           </motion.div>
         </div>
         <LineGradient />

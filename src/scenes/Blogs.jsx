@@ -46,7 +46,7 @@ const data4="hellooo 4"
 const data5="hrllo 5"
 const data6="heloo 6"
 const data7="helooo 7"
-const Projects = () => {
+const Blogs = () => {
   return (
     <section id="" className="pt-48 pb-48">
       {/* HEADINGS */}
@@ -115,4 +115,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Blogs;

@@ -1,10 +1,9 @@
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import skill from'../assets/skills-image.png'
 import Upload from "./Upload";
 import Card from "../components/Card";
-const MySkills = () => {
+const Services = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
     <section id="services" className="pt-10 pb-24">
@@ -88,4 +87,4 @@ const MySkills = () => {
   );
 };
 
-export default MySkills;
+export default Services;
