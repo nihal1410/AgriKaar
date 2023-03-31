@@ -13,6 +13,7 @@ import Upload from "./scenes/Upload";
 import Card from "./components/Card";
 import Team from "./scenes/Team";
 import Blogs from "./scenes/Blogs";
+import Slider from "./Slider/Slider";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -83,8 +84,24 @@ function App() {
             margin="0 0 -200px 0"
             amount="all"
             onViewportEnter={() => setSelectedPage("testimonials")}
-          >
-            <Testimonials />
+          ><motion.div
+          className=""
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <p className="font-playfair font-semibold text-4xl mb-5 text-red">
+            TEAM
+          </p>
+          <LineGradient width="mx-auto w-2/5" />
+          <Slider></Slider>
+        </motion.div>
+            
           </motion.div>
         </div>
         <LineGradient />
@@ -98,6 +115,8 @@ function App() {
           </motion.div>
         </div>
         <Footer />
+      
+       
       </div>
       
    
